@@ -1,0 +1,6 @@
+# Originales que la página no usa (la web usa assets/web y assets/videos)
+assets/products/
+/dia *.mp4
+/WhatsApp Image*
+.claude/
+__pycache__/

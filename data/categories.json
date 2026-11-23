@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Accesorios Celular",
+    "slug": "accesorios-celular",
+    "count": 31
+  },
+  {
+    "name": "Audífonos/Diademas",
+    "slug": "audifonos",
+    "count": 22
+  },
+  {
+    "name": "Belleza",
+    "slug": "belleza",
+    "count": 25
+  },
+  {
+    "name": "Cacharro",
+    "slug": "cacharro",
+    "count": 12
+  },
+  {
+    "name": "D-Moda",
+    "slug": "dmoda",
+    "count": 5
+  },
+  {
+    "name": "Hogar",
+    "slug": "hogar",
+    "count": 72
+  },
+  {
+    "name": "JKMX",
+    "slug": "jkmx",
+    "count": 16
+  },
+  {
+    "name": "Jugueteria/Educación",
+    "slug": "jugueteria",
+    "count": 47
+  },
+  {
+    "name": "Linea Blanca",
+    "slug": "linea-blanca",
+    "count": 15
+  },
+  {
+    "name": "Mascotas",
+    "slug": "mascotas",
+    "count": 2
+  },
+  {
+    "name": "Mundo Bebé",
+    "slug": "mundo-bebe",
+    "count": 4
+  },
+  {
+    "name": "Parlanteria",
+    "slug": "parlanteria",
+    "count": 23
+  },
+  {
+    "name": "Sin Categoria",
+    "slug": "sin-categoria",
+    "count": 1
+  },
+  {
+    "name": "Smart Watch",
+    "slug": "smart-watch",
+    "count": 30
+  }
+]

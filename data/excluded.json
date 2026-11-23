@@ -1,0 +1,62 @@
+[
+  {
+    "id": 24910,
+    "name": "Moto Eléctrica para Niños",
+    "slug": "moto-electrica-para-ninos",
+    "motivo": "nombre del producto"
+  },
+  {
+    "id": 24525,
+    "name": "Bicicleta Aries Niño Rin 20 JOE-095 Acero",
+    "slug": "bicicleta-aries-nino-rin-20-acero",
+    "motivo": "categoria: Bicicletas"
+  },
+  {
+    "id": 24521,
+    "name": "Bicicleta Aries Niño Rin 20 JOE-096 Aluminio",
+    "slug": "bicicleta-aries-nino-rin-20",
+    "motivo": "categoria: Bicicletas"
+  },
+  {
+    "id": 24512,
+    "name": "Bicicleta Aries Acero Rin 29 JOE-008",
+    "slug": "bicicleta-aries-acero-rin-29",
+    "motivo": "categoria: Bicicletas"
+  },
+  {
+    "id": 24508,
+    "name": "Bicicleta Aries Aluminio Rin 29 JOE-001",
+    "slug": "bicicleta-aries-aluminio-rin-29",
+    "motivo": "categoria: Bicicletas"
+  },
+  {
+    "id": 24500,
+    "name": "Bicicleta Aries Aluminio JOE-003",
+    "slug": "bicicleta-aries-joe-003",
+    "motivo": "categoria: Bicicletas"
+  },
+  {
+    "id": 24496,
+    "name": "Bicicleta Aries Aluminio JOE-004",
+    "slug": "bicicleta-aries-joe-004",
+    "motivo": "categoria: Bicicletas"
+  },
+  {
+    "id": 24492,
+    "name": "Bicicleta Aries Aluminio JOE-005",
+    "slug": "bicicleta-aries-joe-005",
+    "motivo": "categoria: Bicicletas"
+  },
+  {
+    "id": 24487,
+    "name": "Bicicleta Aries Aluminio JOE-006",
+    "slug": "bicicleta-aries-joe-006",
+    "motivo": "categoria: Bicicletas"
+  },
+  {
+    "id": 22847,
+    "name": "Luz + timbre bicicleta",
+    "slug": "luz-timbre-bicicleta",
+    "motivo": "nombre del producto"
+  }
+]

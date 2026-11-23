@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Home Best · Tecnología y hogar</title>
+  <meta name="description" content="Home Best: iPhones, tecnología, accesorios y todo para tu hogar. Arma tu pedido y envíalo por WhatsApp.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=8">
+</head>
+<body>
+  <!-- Barra de anuncios -->
+  <div class="announce" id="announce" aria-live="polite"><span id="announceText"></span></div>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="logo" href="#" aria-label="Home Best inicio">
+        <img class="logo-img" src="assets/brand/logo.webp" alt="" width="40" height="40">
+        <span class="logo-text">Home<b>Best</b></span>
+      </a>
+      <a class="nav-link" href="serie.html"><span class="nav-dot" aria-hidden="true"></span>La serie</a>
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <input id="search" type="search" placeholder="Buscar en Home Best" autocomplete="off">
+      </label>
+      <button class="cart-btn" id="openCart" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+        <span class="badge" id="cartCount" hidden>0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Catálogo Home Best</p>
+      <h1>La mejor forma de comprar<br><span class="grad">lo que te encanta.</span></h1>
+      <p class="hero-sub">iPhones, tecnología, accesorios y todo para tu hogar. Arma tu pedido y te atendemos directo por WhatsApp.</p>
+      <div class="hero-actions">
+        <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+        <button class="btn btn-outline" data-cat-jump="iphone">Ver iPhones</button>
+      </div>
+      <div class="hero-shelf" id="heroShelf" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="cats wrap" aria-labelledby="catsTitle">
+    <div class="section-head">
+      <h2 id="catsTitle">Compra por categoría.</h2>
+      <div class="scroll-btns">
+        <button class="round-btn" data-scroll="-1" aria-label="Anterior">‹</button>
+        <button class="round-btn" data-scroll="1" aria-label="Siguiente">›</button>
+      </div>
+    </div>
+    <div class="cat-row" id="catRow"></div>
+  </section>
+
+  <!-- Banners destacados -->
+  <section class="wrap promo-grid">
+    <article class="promo promo-dark">
+      <div class="promo-copy">
+        <p class="eyebrow eyebrow-light">Nuevos y seminuevos</p>
+        <h3>iPhone</h3>
+        <p>Del iPhone 12 al iPhone 18 Pro Max. Originales y con garantía: cotiza el modelo, color y capacidad que buscas.</p>
+        <div class="promo-actions">
+          <button class="btn btn-primary btn-sm" data-cat-jump="iphone">Ver iPhones</button>
+        </div>
+      </div>
+      <div class="promo-phone" id="promoPhone" aria-hidden="true">
+        <div class="phone"><span class="cam"></span><span class="cam"></span><span class="cam"></span><span class="logo-dot"></span></div>
+        <div class="phone phone-2"><span class="cam"></span><span class="cam"></span><span class="logo-dot"></span></div>
+      </div>
+    </article>
+    <article class="promo promo-light" id="promoSale">
+      <div class="promo-copy">
+        <p class="eyebrow eyebrow-hot">Ofertas</p>
+        <h3>Precios especiales.</h3>
+        <p>Productos seleccionados por tiempo limitado.</p>
+        <div class="promo-actions">
+          <button class="btn btn-primary btn-sm" data-cat-set="__sale">Ver ofertas</button>
+        </div>
+      </div>
+      <div class="promo-imgs" id="promoSaleImgs" aria-hidden="true"></div>
+    </article>
+  </section>
+
+  <!-- La serie: último día -->
+  <section class="wrap" id="serieHome" aria-labelledby="serieHomeTitle">
+    <div class="serie-home">
+      <div class="serie-home-copy">
+        <p class="eyebrow eyebrow-light">La serie · Nuevo episodio</p>
+        <h2 id="serieHomeTitle"></h2>
+        <p id="serieHomeIntro"></p>
+        <div class="day-chips" id="serieHomeDays"></div>
+        <div class="promo-actions serie-home-actions">
+          <a class="btn btn-primary btn-sm" href="serie.html">Ver todos los días</a>
+          <button class="btn btn-outline-light btn-sm" data-cat-jump="iphone">Ver iPhones</button>
+        </div>
+      </div>
+      <div class="serie-home-video" id="serieHomeVideo"></div>
+    </div>
+  </section>
+
+  <!-- Catálogo -->
+  <main id="catalogo" class="catalog">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Todos los productos. <span class="muted" id="resultCount"></span></h2>
+      </div>
+    </div>
+    <div class="toolbar">
+      <div class="wrap toolbar-in">
+        <div class="chips" id="chips" role="tablist" aria-label="Categorías"></div>
+        <select id="sort" aria-label="Ordenar">
+          <option value="rel">Destacados</option>
+          <option value="asc">Menor precio</option>
+          <option value="desc">Mayor precio</option>
+          <option value="az">Nombre A–Z</option>
+        </select>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="grid" id="grid" aria-live="polite"></div>
+      <p class="empty" id="empty" hidden>No encontramos productos con esa búsqueda.</p>
+      <div class="more" id="moreWrap" hidden><button class="btn btn-outline-dark" id="moreBtn">Ver más productos</button></div>
+    </div>
+  </main>
+
+  <!-- Razones -->
+  <section class="reasons-wrap">
+    <div class="wrap">
+      <div class="section-head"><h2>Aún más razones para comprar con nosotros.</h2></div>
+      <div class="reasons" id="reasons"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img class="footer-logo" src="assets/brand/logo.webp" alt="Home Best" width="96" height="96" loading="lazy">
+          <div>
+            <span class="logo-text">Home<b>Best</b></span>
+            <p>Tecnología · Belleza · Hogar. Todo en un solo lugar.</p>
+          </div>
+        </div>
+        <a class="btn btn-wa" id="footerWa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-icon"/></svg>
+          Escríbenos al WhatsApp
+        </a>
+      </div>
+      <p class="fine">Precios en pesos colombianos (COP), sujetos a cambio y disponibilidad. El pedido se confirma por WhatsApp. © <span id="year"></span> Home Best.</p>
+    </div>
+  </footer>
+
+  <!-- Detalle de producto -->
+  <dialog class="modal" id="productModal">
+    <button class="icon-btn modal-close" data-close aria-label="Cerrar">✕</button>
+    <div class="modal-body" id="modalBody"></div>
+  </dialog>
+
+  <!-- Carrito -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Tu bolsa.</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="drawer-items" id="cartItems"></div>
+    <form class="drawer-foot" id="checkout">
+      <div class="total-row"><span>Total estimado</span><strong id="cartTotal">$0</strong></div>
+      <p class="quote-note" id="quoteNote" hidden></p>
+      <div class="fields">
+        <input name="nombre" placeholder="Tu nombre *" required autocomplete="name">
+        <input name="ciudad" placeholder="Ciudad / barrio" autocomplete="address-level2">
+        <input name="direccion" placeholder="Dirección" autocomplete="street-address">
+        <textarea name="nota" rows="2" placeholder="Nota (opcional)"></textarea>
+      </div>
+      <button class="btn btn-wa btn-block" type="submit" id="sendWa">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-icon"/></svg>
+        Enviar pedido por WhatsApp
+      </button>
+      <p class="secure">🔒 Sin pagos en línea: confirmas y pagas directamente con nosotros.</p>
+    </form>
+  </aside>
+
+  <a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24"><use href="#wa-icon"/></svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="wa-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></symbol>
+  </svg>
+
+  <script src="config.js?v=3"></script>
+  <script src="data/custom-products.js?v=3"></script>
+  <script src="data/products.js?v=3"></script>
+  <script src="app.js?v=3"></script>
+  <script src="data/videos.js?v=3"></script>
+  <script src="series.js?v=3"></script>
+</body>
+</html>
